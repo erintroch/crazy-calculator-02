@@ -1,0 +1,28 @@
+.inputText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.colorInput {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.colorInputContainer {
+  width: 5rem;
+  height: 5rem;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.beforeInfo {
+  color: white;
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
