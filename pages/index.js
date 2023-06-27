@@ -1,5 +1,7 @@
 import Head from "next/head";
 import ColorInput from "../components/colorInput";
+import SliderAll from "../components/sliderAll";
+import PatternContainer from "../components/patternContainer";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -53,7 +55,22 @@ export default function Home() {
               beforeInfo="fig. 3"
             />
           </div>
+          <div>
+            <SliderAll
+              max={360}
+              value={angle}
+              onValueChange={(value) => setAngle(value)}
+              beforeInfo="Rotate pattern"
+              afterInfo={`${angle}°`}
+            />
+          </div>
         </div>
+        <PatternContainer
+          colorFigureOne={newColor}
+          colorFigureTwo={newColorTwo}
+          colorFigureThree={newColorThree}
+          angle={angle}
+        />
       </main>
     </div>
   );

@@ -12,6 +12,7 @@
   border-bottom-right-radius: 2rem;
   padding: 2rem;
   position: absolute;
+  z-index: 10;
 }
 
 .arrowButton {

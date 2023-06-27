@@ -1,0 +1,22 @@
+.container {
+  margin-top: 2.5rem;
+}
+
+.beforeInfo {
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.afterInfo {
+  font-size: 1.3rem;
+  color: white;
+  font-style: italic;
+  margin-left: 1rem;
+}
+
+.flexInfo {
+  display: flex;
+  align-items: center;
+}

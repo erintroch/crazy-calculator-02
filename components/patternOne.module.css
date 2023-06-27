@@ -1,0 +1,62 @@
+.bigContainerPatternOneWhiteCube {
+  display: flex;
+}
+
+.patternOneWhiteCube {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.whiteCubeLeftTop {
+  border-top-left-radius: 0.75rem;
+}
+
+.whiteCubeLeftBottom {
+  border-bottom-left-radius: 0.75rem;
+}
+
+.whiteCubeRightTop {
+  border-top-right-radius: 0.75rem;
+}
+
+.whiteCubeRightBottom {
+  border-bottom-right-radius: 0.75rem;
+}
+
+/**/
+
+.patternOneCircle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border-width: 0.4rem;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patternOneCircleInner {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(45deg);
+}
+
+/**/
+
+.patternOneWaveOne {
+  width: 2rem;
+  height: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.patternOneWaveSub {
+  width: 2rem;
+  height: 1rem;
+}
+
+.patternOneWaveTwo {
+  width: 2rem;
+  height: 1rem;
+  border-bottom-right-radius: 1rem;
+}
