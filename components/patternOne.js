@@ -4,35 +4,67 @@ export default function PatternOne({
   colorFigureOne,
   colorFigureTwo,
   colorFigureThree,
+  margin,
+  margina,
+  angleFigOne,
+  angleFigTwo,
+  angleFigThree,
 }) {
   return (
     <>
-      <div className={styles.bigContainerPatternOneWhiteCube}>
+      <div
+        style={{
+          margin: `${margin}px`,
+          transform: `rotate(${angleFigOne}deg)`,
+        }}
+        className={styles.bigContainerPatternOneWhiteCube}
+      >
         <div>
           <div
-            style={{ backgroundColor: colorFigureOne }}
+            style={{
+              backgroundColor: colorFigureOne,
+              margin: `${margina}px`,
+              marginBottom: `${margina * 2}px`,
+            }}
             className={`${styles.patternOneWhiteCube} ${styles.whiteCubeLeftTop}`}
           ></div>
           <div
-            style={{ backgroundColor: colorFigureOne }}
+            style={{
+              backgroundColor: colorFigureOne,
+              margin: `${margina}px`,
+            }}
             className={`${styles.patternOneWhiteCube} ${styles.whiteCubeLeftBottom}`}
           ></div>
         </div>
         <div>
           <div
-            style={{ backgroundColor: colorFigureOne }}
+            style={{
+              backgroundColor: colorFigureOne,
+              margin: `${margina}px`,
+              marginBottom: `${margina * 2}px`,
+            }}
             className={`${styles.patternOneWhiteCube} ${styles.whiteCubeRightTop}`}
           ></div>
           <div
-            style={{ backgroundColor: colorFigureOne }}
+            style={{ backgroundColor: colorFigureOne, margin: `${margina}px` }}
             className={`${styles.patternOneWhiteCube} ${styles.whiteCubeRightBottom}`}
           ></div>
         </div>
       </div>
 
-      <div className={styles.bigContainerPatternOneCircle}>
+      <div
+        style={{
+          margin: `${margin}px`,
+          transform: `rotate(${angleFigTwo}deg)`,
+        }}
+        className={styles.bigContainerPatternOneCircle}
+      >
         <div
-          style={{ borderColor: colorFigureTwo }}
+          style={{
+            borderColor: colorFigureTwo,
+            width: `${margina * 1 + 40}px`,
+            height: `${margina * 1 + 40}px`,
+          }}
           className={styles.patternOneCircle}
         >
           <div
@@ -42,17 +74,23 @@ export default function PatternOne({
         </div>
       </div>
 
-      <div className={styles.bigContainerPatternOneWave}>
+      <div
+        style={{
+          margin: `${margin}px`,
+          transform: `rotate(${angleFigThree}deg)`,
+        }}
+        className={styles.bigContainerPatternOneWave}
+      >
         <div
-          style={{ backgroundColor: colorFigureThree }}
+          style={{ backgroundColor: colorFigureThree, margin: `${margina}px` }}
           className={styles.patternOneWaveOne}
         ></div>
         <div
-          style={{ backgroundColor: colorFigureThree }}
+          style={{ backgroundColor: colorFigureThree, margin: `${margina}px` }}
           className={styles.patternOneWaveSub}
         ></div>
         <div
-          style={{ backgroundColor: colorFigureThree }}
+          style={{ backgroundColor: colorFigureThree, margin: `${margina}px` }}
           className={styles.patternOneWaveTwo}
         ></div>
       </div>
