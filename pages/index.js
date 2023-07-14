@@ -23,7 +23,17 @@ export default function Home() {
 
   const [patternType, setPatternType] = useState("1");
 
+  const [sliderState, setSliderState] = useState(true);
+
   const test = "hi";
+
+  const handleClick = (e) => {
+    if (sliderState) {
+      setSliderState(false);
+    } else {
+      setSliderState(true);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -34,8 +44,19 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.leftMainDiv}>
-          <div className={styles.arrowButton}>
+        <div
+          className={`${styles.leftMainDiv} ${
+            sliderState ? styles.animateLeftDivIn : styles.animateLeftDivOut
+          }`}
+        >
+          <div
+            className={`${styles.arrowButton} ${
+              sliderState
+                ? styles.animateArrowButtonIn
+                : styles.animateArrowButtonOut
+            }`}
+            onClick={(e) => handleClick(e)}
+          >
             <div className={styles.arrowTop}></div>
             <div className={styles.arrowBottom}></div>
           </div>

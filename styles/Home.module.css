@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-color: #333333;
   display: flex;
+  overflow: hidden;
 }
 
 .leftMainDiv {
@@ -15,6 +16,62 @@
   z-index: 10;
 }
 
+.animateLeftDivIn {
+  animation: animateIn 0.5s ease-in-out;
+  left: 0rem;
+}
+
+.animateLeftDivOut {
+  animation: animateOut 0.5s ease-in-out;
+  left: -25rem;
+}
+
+@keyframes animateIn {
+  0% {
+    left: -25rem;
+  }
+  100% {
+    left: 0rem;
+  }
+}
+
+@keyframes animateOut {
+  0% {
+    left: 0rem;
+  }
+  100% {
+    left: -25rem;
+  }
+}
+
+.animateArrowButtonIn {
+  transform: rotate(180deg);
+  animation: animateArrowButtonIn 0.5s ease-in-out;
+}
+
+.animateArrowButtonOut {
+  transform: rotate(0deg);
+  animation: animateArrowButtonOut 0.5s ease-in-out;
+}
+
+@keyframes animateArrowButtonIn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes animateArrowButtonOut {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .arrowButton {
   position: absolute;
   top: 1rem;
@@ -25,6 +82,7 @@
   justify-content: center;
   align-items: center;
   right: -5rem;
+  cursor: pointer;
 }
 
 .arrowTop,
