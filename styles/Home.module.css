@@ -6,14 +6,29 @@
 }
 
 .leftMainDiv {
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(25, 25, 25);
   width: 25rem;
   height: 100vh;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  padding: 2rem;
+  padding: 2rem 0;
   position: absolute;
   z-index: 10;
+}
+
+.contentBox {
+  background-color: rgb(40, 40, 40);
+  overflow-y: scroll;
+  height: calc(100vh - 4rem);
+  width: 100%;
+  padding: 2rem;
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  box-shadow: inset 0px 11px 8px -10px black, inset 0px -11px 8px -10px black;
+}
+
+.contentBox::-webkit-scrollbar {
+  display: none;
 }
 
 .animateLeftDivIn {
@@ -110,4 +125,100 @@
 .flexInputFields {
   display: flex;
   justify-content: space-around;
+}
+
+.sliderDivComp {
+  min-width: 21rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .leftMainDiv {
+    width: 100vw;
+    height: calc(100vh - 6rem);
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentBox {
+    height: calc(100vh - 10rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrowButton {
+    top: inherit;
+    right: inherit;
+    bottom: -5rem;
+    transform: rotate(-90deg);
+  }
+
+  .colorInputComp {
+    margin: 2rem;
+  }
+
+  .animateLeftDivIn {
+    animation: animateInMobile 0.5s ease-in-out;
+    bottom: 6rem;
+    left: inherit;
+  }
+
+  .animateLeftDivOut {
+    animation: animateOutMobile 0.5s ease-in-out;
+    bottom: calc(100vh);
+    left: inherit;
+  }
+
+  @keyframes animateInMobile {
+    0% {
+      bottom: calc(100vh);
+    }
+    100% {
+      bottom: 6rem;
+    }
+  }
+
+  @keyframes animateOutMobile {
+    0% {
+      bottom: 6rem;
+    }
+    100% {
+      bottom: calc(100vh);
+    }
+  }
+
+  .animateArrowButtonIn {
+    transform: rotate(-90deg);
+    animation: animateArrowButtonIn 0.5s ease-in-out;
+  }
+
+  .animateArrowButtonOut {
+    transform: rotate(90deg);
+    animation: animateArrowButtonOut 0.5s ease-in-out;
+  }
+
+  @keyframes animateArrowButtonIn {
+    0% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(-90deg);
+    }
+  }
+
+  @keyframes animateArrowButtonOut {
+    0% {
+      transform: rotate(-90deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
 }
