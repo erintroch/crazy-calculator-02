@@ -137,25 +137,25 @@
 @media only screen and (max-width: 600px) {
   .leftMainDiv {
     width: 100vw;
-    height: calc(100vh - 6rem);
+    height: calc(33vh);
     border-top-right-radius: 0rem;
     border-bottom-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+    bottom: inherit;
   }
 
   .contentBox {
-    height: calc(100vh - 10rem);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .arrowButton {
-    top: inherit;
-    right: inherit;
+    top: auto;
+    right: auto;
     bottom: -5rem;
     transform: rotate(-90deg);
   }
@@ -166,31 +166,31 @@
 
   .animateLeftDivIn {
     animation: animateInMobile 0.5s ease-in-out;
-    bottom: 6rem;
+    top: 0rem;
     left: inherit;
   }
 
   .animateLeftDivOut {
     animation: animateOutMobile 0.5s ease-in-out;
-    bottom: calc(100vh);
+    top: -33vh;
     left: inherit;
   }
 
   @keyframes animateInMobile {
     0% {
-      bottom: calc(100vh);
+      top: -33vh;
     }
     100% {
-      bottom: 6rem;
+      top: 0rem;
     }
   }
 
   @keyframes animateOutMobile {
     0% {
-      bottom: 6rem;
+      top: 0rem;
     }
     100% {
-      bottom: calc(100vh);
+      top: -33vh;
     }
   }
 

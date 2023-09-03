@@ -1,5 +1,6 @@
 import styles from "./patternContainer.module.css";
 import PatternOne from "./patternOne";
+import PatternTwo from "./patternTwo";
 
 export default function PatternContainer({
   colorFigureOne,
@@ -12,6 +13,7 @@ export default function PatternContainer({
   margin,
   margina,
   amount,
+  patternType,
 }) {
   const array = [];
 
@@ -33,24 +35,48 @@ export default function PatternContainer({
           }}
           className={styles.gridContainer}
         >
-          {array.map((element) => (
-            <div
-              key={element}
-              style={{ transform: `rotate(${angle}deg)` }}
-              className={styles.patternDiv}
-            >
-              <PatternOne
-                colorFigureOne={colorFigureOne}
-                colorFigureTwo={colorFigureTwo}
-                colorFigureThree={colorFigureThree}
-                margin={margin}
-                margina={margina}
-                angleFigOne={angleFigOne}
-                angleFigTwo={angleFigTwo}
-                angleFigThree={angleFigThree}
-              />
-            </div>
-          ))}
+          {array.map((element) => {
+            if (patternType === 1) {
+              return (
+                <div
+                  key={element}
+                  style={{ transform: `rotate(${angle}deg)` }}
+                  className={styles.patternDiv}
+                >
+                  <PatternOne
+                    colorFigureOne={colorFigureOne}
+                    colorFigureTwo={colorFigureTwo}
+                    colorFigureThree={colorFigureThree}
+                    margin={margin}
+                    margina={margina}
+                    angleFigOne={angleFigOne}
+                    angleFigTwo={angleFigTwo}
+                    angleFigThree={angleFigThree}
+                  />
+                </div>
+              );
+            }
+            if (patternType === 2) {
+              return (
+                <div
+                  key={element}
+                  style={{ transform: `rotate(${angle}deg)` }}
+                  className={styles.patternDiv}
+                >
+                  <PatternTwo
+                    colorFigureOne={colorFigureOne}
+                    colorFigureTwo={colorFigureTwo}
+                    colorFigureThree={colorFigureThree}
+                    margin={margin}
+                    margina={margina}
+                    angleFigOne={angleFigOne}
+                    angleFigTwo={angleFigTwo}
+                    angleFigThree={angleFigThree}
+                  />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     </>

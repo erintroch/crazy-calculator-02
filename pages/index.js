@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import React, { useState } from "react";
+import TypePattern from "../components/typePattern";
 
 export default function Home() {
   const [color, setColor] = useState({ r: 255, g: 62, b: 118 });
@@ -21,7 +22,7 @@ export default function Home() {
   const [amount, setAmount] = useState(3);
   const [backgroundValue, setBackgroundValue] = useState(`standard`);
 
-  const [patternType, setPatternType] = useState("1");
+  const [patternType, setPatternType] = useState(1);
 
   const [sliderState, setSliderState] = useState(true);
 
@@ -129,6 +130,13 @@ export default function Home() {
                 afterInfo={`${amount} x ${amount}`}
               />
             </div>
+
+            <div>
+              <TypePattern
+                value={patternType}
+                onValueChange={(value) => setPatternType(value)}
+              />
+            </div>
           </div>
         </div>
         <PatternContainer
@@ -142,6 +150,7 @@ export default function Home() {
           angleFigTwo={angleFigTwo}
           angleFigThree={angleFigThree}
           amount={amount}
+          patternType={patternType}
         />
       </main>
     </div>

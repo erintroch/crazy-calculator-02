@@ -1,0 +1,39 @@
+.patternTypeContainer {
+  border-top: 0.1rem solid white;
+  margin-top: 4rem;
+  padding-top: 3rem;
+}
+
+.beforeInfo {
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.patternTypeSelectors {
+  display: flex;
+  justify-content: space-around;
+}
+
+.patternTypeDiv {
+  background-color: white;
+  color: rgb(25, 25, 25);
+  border: 0.2rem solid white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.patternTypeDivActive {
+  background-color: #3273f6;
+  border: #3273f6;
+}
