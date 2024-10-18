@@ -1,0 +1,166 @@
+.surroundHorizontal {
+  display: flex;
+}
+
+/**/
+
+.surroundFirst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**/
+
+.circleMoveContainer {
+  position: relative;
+  display: flex;
+}
+
+.circleMoveOne {
+  transform: scale(0.5);
+  width: 4rem;
+  height: 4rem;
+  border: 0.3rem solid;
+  border-radius: 4rem;
+  top: 0;
+  position: relative;
+  animation: 4s circleOne ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.circleMoveTwo {
+  width: 4rem;
+  height: 4rem;
+  border: 0.3rem solid;
+  border-radius: 4rem;
+  position: relative;
+  animation: 4s circleOne ease-in-out infinite;
+}
+
+@keyframes circleOne {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+/**/
+
+.elipse {
+  width: 3rem;
+  height: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  animation: 4s rotateElipse ease-in-out infinite;
+}
+
+@keyframes rotateElipse {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+/**/
+
+.cube {
+  border: 0.3rem solid;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 3s clockwise linear infinite;
+  border-radius: 0.75rem;
+}
+
+.innerCube {
+  width: 1rem;
+  height: 1rem;
+  animation: 3s counterClockwise linear infinite;
+  border-radius: 0.2rem;
+}
+
+/**/
+
+.stripe {
+  width: 0.6rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  animation: 4s stretcher ease-in-out infinite;
+}
+
+@keyframes stretcher {
+  0% {
+    width: 0.6rem;
+    height: 4rem;
+  }
+
+  50% {
+    width: 4rem;
+    height: 0.6rem;
+  }
+
+  100% {
+    width: 0.6rem;
+    height: 4rem;
+  }
+}
+
+/**/
+
+.coolBall {
+  display: flex;
+  justify-content: center;
+  animation: 2s clockwise linear infinite;
+}
+
+.ballOne,
+.ballTwo,
+.ballThree,
+.ballFour {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+}
+
+.ballTwo,
+.ballThree {
+  border-radius: 2rem;
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-720deg);
+  }
+}

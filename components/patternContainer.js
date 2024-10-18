@@ -1,6 +1,8 @@
 import styles from "./patternContainer.module.css";
 import PatternOne from "./patternOne";
 import PatternTwo from "./patternTwo";
+import PatternThree from "./patternThree";
+import PatternFour from "./patternFour";
 
 export default function PatternContainer({
   colorFigureOne,
@@ -56,7 +58,7 @@ export default function PatternContainer({
                 </div>
               );
             }
-            if (patternType === 2) {
+            if (patternType === 3) {
               return (
                 <div
                   key={element}
@@ -64,6 +66,46 @@ export default function PatternContainer({
                   className={styles.patternDiv}
                 >
                   <PatternTwo
+                    colorFigureOne={colorFigureOne}
+                    colorFigureTwo={colorFigureTwo}
+                    colorFigureThree={colorFigureThree}
+                    margin={margin}
+                    margina={margina}
+                    angleFigOne={angleFigOne}
+                    angleFigTwo={angleFigTwo}
+                    angleFigThree={angleFigThree}
+                  />
+                </div>
+              );
+            }
+            if (patternType === 4) {
+              return (
+                <div
+                  key={element}
+                  style={{ transform: `rotate(${angle}deg)` }}
+                  className={styles.patternDiv}
+                >
+                  <PatternThree
+                    colorFigureOne={colorFigureOne}
+                    colorFigureTwo={colorFigureTwo}
+                    colorFigureThree={colorFigureThree}
+                    margin={margin}
+                    margina={margina}
+                    angleFigOne={angleFigOne}
+                    angleFigTwo={angleFigTwo}
+                    angleFigThree={angleFigThree}
+                  />
+                </div>
+              );
+            }
+            if (patternType === 2) {
+              return (
+                <div
+                  key={element}
+                  style={{ transform: `rotate(${angle}deg)` }}
+                  className={styles.patternDiv}
+                >
+                  <PatternFour
                     colorFigureOne={colorFigureOne}
                     colorFigureTwo={colorFigureTwo}
                     colorFigureThree={colorFigureThree}

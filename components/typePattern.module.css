@@ -37,3 +37,9 @@
   background-color: #3273f6;
   border: #3273f6;
 }
+
+@media only screen and (max-width: 600px) {
+  .patternTypeDiv {
+    margin: 1rem;
+  }
+}

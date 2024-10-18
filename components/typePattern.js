@@ -15,29 +15,25 @@ export default function TypePattern({ value, onValueChange }) {
           {amountOfTypes.map((i) => {
             if (value === i) {
               return (
-                <>
-                  <div
-                    id={i}
-                    key={i}
-                    onClick={clickType}
-                    className={`${styles.patternTypeDiv} ${styles.patternTypeDivActive}`}
-                  >
-                    {i}
-                  </div>
-                </>
+                <div
+                  id={i}
+                  key={i}
+                  onClick={clickType}
+                  className={`${styles.patternTypeDiv} ${styles.patternTypeDivActive}`}
+                >
+                  {i}
+                </div>
               );
             } else {
               return (
-                <>
-                  <div
-                    id={i}
-                    key={i}
-                    onClick={clickType}
-                    className={`${styles.patternTypeDiv}`}
-                  >
-                    {i}
-                  </div>
-                </>
+                <div
+                  id={i}
+                  key={i}
+                  onClick={clickType}
+                  className={`${styles.patternTypeDiv}`}
+                >
+                  {i}
+                </div>
               );
             }
           })}
