@@ -26,8 +26,6 @@ export default function Home() {
 
   const [sliderState, setSliderState] = useState(true);
 
-  const test = "hi";
-
   const handleClick = (e) => {
     if (sliderState) {
       setSliderState(false);
@@ -50,16 +48,18 @@ export default function Home() {
             sliderState ? styles.animateLeftDivIn : styles.animateLeftDivOut
           }`}
         >
-          <div
-            className={`${styles.arrowButton} ${
-              sliderState
-                ? styles.animateArrowButtonIn
-                : styles.animateArrowButtonOut
-            }`}
-            onClick={(e) => handleClick(e)}
-          >
-            <div className={styles.arrowTop}></div>
-            <div className={styles.arrowBottom}></div>
+          <div className={styles.arrowContainer}>
+            <div
+              className={`${styles.arrowButton} ${
+                sliderState
+                  ? styles.animateArrowButtonIn
+                  : styles.animateArrowButtonOut
+              }`}
+              onClick={(e) => handleClick(e)}
+            >
+              <div className={styles.arrowTop}></div>
+              <div className={styles.arrowBottom}></div>
+            </div>
           </div>
           <div className={styles.contentBox}>
             <div className={styles.flexInputFields}>
@@ -151,6 +151,7 @@ export default function Home() {
           angleFigThree={angleFigThree}
           amount={amount}
           patternType={patternType}
+          sliderState={sliderState}
         />
       </main>
     </div>

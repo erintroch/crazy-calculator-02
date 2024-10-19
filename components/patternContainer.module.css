@@ -5,6 +5,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .gridContainer {
@@ -16,4 +17,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* - */
+
+.animateLeftMarginIn {
+  margin-left: 25rem;
+  animation: animateLeftIn 0.5s ease-in-out;
+}
+
+.animateLeftMarginOut {
+  margin-left: 0;
+  animation: animateLeftOut 0.5s ease-in-out;
+}
+
+@keyframes animateLeftIn {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 25rem;
+  }
+}
+
+@keyframes animateLeftOut {
+  0% {
+    margin-left: 25rem;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .animateLeftMarginIn {
+    margin-left: unset;
+    margin-top: 30vh;
+    animation: animateTopMobileIn 0.5s ease-in-out;
+  }
+
+  .animateLeftMarginOut {
+    margin-left: unset;
+    margin-top: 0;
+    animation: animateTopMobileOut 0.5s ease-in-out;
+  }
+
+  @keyframes animateTopMobileIn {
+    0% {
+      margin-top: 0;
+    }
+    100% {
+      margin-top: 30vh;
+    }
+  }
+
+  @keyframes animateTopMobileOut {
+    0% {
+      margin-top: 30vh;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
 }

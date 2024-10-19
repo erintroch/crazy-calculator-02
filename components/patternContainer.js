@@ -16,6 +16,7 @@ export default function PatternContainer({
   margina,
   amount,
   patternType,
+  sliderState,
 }) {
   const array = [];
 
@@ -29,7 +30,11 @@ export default function PatternContainer({
 
   return (
     <>
-      <div className={styles.patternContainer}>
+      <div
+        className={`${styles.patternContainer} ${
+          sliderState ? styles.animateLeftMarginIn : styles.animateLeftMarginOut
+        }`}
+      >
         <div
           style={{
             gridTemplateColumns: `repeat(${amount}, auto)`,

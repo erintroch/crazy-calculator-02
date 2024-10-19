@@ -87,16 +87,26 @@
   }
 }
 
-.arrowButton {
+.arrowContainer {
+  background-color: rgb(25, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 1rem;
   width: 5rem;
   height: 5rem;
+  right: -5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.arrowButton {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  right: -5rem;
+  width: 5rem;
+  height: 5rem;
   cursor: pointer;
 }
 
@@ -153,10 +163,19 @@
     align-items: center;
   }
 
+  .arrowContainer {
+    bottom: -5rem;
+    width: 5rem;
+    height: 5rem;
+    right: unset;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
   .arrowButton {
     top: auto;
     right: auto;
-    bottom: -5rem;
     transform: rotate(-90deg);
   }
 
